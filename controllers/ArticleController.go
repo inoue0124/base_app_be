@@ -21,9 +21,6 @@ func (u ArticleController) GetAllArticles(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, gin.H{"message": "Article founded!", "Articles": Articles})
 	return
-	c.JSON(http.StatusBadRequest, gin.H{"message": "bad request"})
-	c.Abort()
-	return
 }
 
 func (u ArticleController) PostArticle(c *gin.Context) {

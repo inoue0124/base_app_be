@@ -29,7 +29,7 @@ func (s ArticleService) GetAllArticles() ([]Article, error) {
 	var articles []Article
 	db.Order("id desc").Limit(10).Find(&articles)
 	if len(articles) == 0 {
-		return nil, errors.New("No articles found!")
+		return nil, errors.New("no articles found")
 	}
 	return articles, nil
 }
